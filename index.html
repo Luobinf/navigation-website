@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>世界上最简单的网页</title>
+    <link rel="shortcut icon"type="image/x-icon"href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="clock">
+            <span id="hour" class="red"></span>
+            <span id="minute" class="green"></span>
+            <span id="second" class="blue"></span>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper" id="mainInner"></div>
+    </main>
+    <footer></footer>
+    <script src="./tools.js"></script>
+    <script>
+
+        //1.初始化数据
+        let keys = initData().keys;
+        let hash = initData().hash;
+
+
+        //2.动态的生成按键
+        generateKbds();
+
+        //3.按下键盘时跳转到相应的网址 4.点击kbd或编辑或favicon图标，可以跳转到响应的网址
+        skipToWeb ();
+
+        //4.获取时间
+        createClock()
+    </script>
+</body>
+
+</html>
